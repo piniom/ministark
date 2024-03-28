@@ -19,7 +19,17 @@ use alloc::vec::Vec;
 use ark_ff::Field;
 use ark_poly::EvaluationDomain;
 use ministark_gpu::utils::bit_reverse;
-use std::time::Instant;
+
+pub struct Instant{}
+
+impl Instant {
+    pub fn now() -> Self {
+        Instant{}
+    }
+    pub fn elapsed(&self) -> &str {
+        " [UNKNOWN] "
+    }
+}
 
 #[allow(clippy::too_many_lines)]
 pub fn default_prove<S: Stark>(

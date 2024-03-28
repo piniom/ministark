@@ -28,22 +28,20 @@ use std::fmt::Debug;
 use std::iter::zip;
 use std::ops::Deref;
 use std::ops::DerefMut;
+use crate::prover::Instant;
 
-#[cfg(feature = "std")]
 pub struct Timer<'a> {
     name: &'a str,
-    start: std::time::Instant,
+    start: Instant,
 }
 
-#[cfg(feature = "std")]
 impl<'a> Timer<'a> {
     pub fn new(name: &'a str) -> Timer<'a> {
-        let start = std::time::Instant::now();
+        let start = Instant::now();
         Timer { name, start }
     }
 }
 
-#[cfg(feature = "std")]
 impl<'a> Drop for Timer<'a> {
     fn drop(&mut self) {
         println!("{} in {:?}", self.name, self.start.elapsed());

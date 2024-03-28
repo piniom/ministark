@@ -19,7 +19,7 @@ use ark_serialize::CanonicalDeserialize;
 use ark_serialize::CanonicalSerialize;
 use ministark_gpu::GpuFftField;
 use num_traits::Pow;
-use std::time::Instant;
+use crate::prover::Instant;
 
 pub trait AirConfig: Send + Sync + Sized + 'static {
     const NUM_BASE_COLUMNS: usize;

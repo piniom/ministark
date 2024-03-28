@@ -78,6 +78,7 @@ use ministark_gpu::GpuFrom;
 use ministark_gpu::GpuMul;
 pub use proof::Proof;
 pub use trace::Trace;
+pub use ministark_gpu;
 
 // TODO: include ability to specify:
 // - base field

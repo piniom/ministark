@@ -631,19 +631,17 @@ dependencies = [
 [[package]]
 name = "ministark-gpu"
 version = "0.3.0"
+source = "git+https://github.com/andrewmilson/ministark#875fb385bab9fcbb347d4c69898b56cbeeb71ca1"
 dependencies = [
  "ark-ff",
  "ark-ff-optimized",
  "ark-poly",
  "ark-serialize",
  "ark-std",
- "criterion",
  "metal",
  "once_cell",
- "pollster",
  "rand",
  "rayon",
- "winter-math",
  "zeroize",
 ]
 
@@ -1207,21 +1205,6 @@ name = "winapi-x86_64-pc-windows-gnu"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
-
-[[package]]
-name = "winter-math"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9bc10d152c3592ae85785fe117bbd74703ea5d14d32dd87ba26754cb3f62d244"
-dependencies = [
- "winter-utils",
-]
-
-[[package]]
-name = "winter-utils"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec92353fb8da8bbf71d8c92a23c8885a295cdbcfc8fdac0dc663cc99b54cd665"
 
 [[package]]
 name = "zerocopy"
